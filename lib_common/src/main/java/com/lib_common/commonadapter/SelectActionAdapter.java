@@ -29,6 +29,8 @@ public class SelectActionAdapter extends RecyclerView.Adapter<SelectActionAdapte
         this.list = list;
         this.listener = listener;
     }
+
+
     public CardBean getSelected(){
         return list.get(mPosition);
     }
