@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="ImageTranslucentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:colorPrimary" tools:ignore="NewApi">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark" tools:ignore="NewApi">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent" tools:ignore="NewApi">@color/colorAccent</item>
+    </style>
+</resources>

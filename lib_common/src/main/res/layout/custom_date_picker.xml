@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sm_px_44"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/sm_px_16"
+            android:text="取消"
+            android:textColor="@color/color_7d7d7d"
+            android:textSize="@dimen/sm_px_16" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择日期"
+            android:textColor="@color/color_222222"
+            android:textSize="@dimen/sm_px_16" />
+
+        <TextView
+            android:id="@+id/tv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/sm_px_16"
+            android:text="确定"
+            android:textColor="@color/color_1D79E9"
+            android:textSize="@dimen/sm_px_16"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sm_px_5"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/sm_px_13"
+            android:paddingLeft="@dimen/sm_px_40"
+            android:paddingRight="@dimen/sm_px_40"
+            android:paddingTop="@dimen/sm_px_15">
+
+            <com.lib_common.widget.datapicker.DatePickerView
+                android:id="@+id/year_pv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/sm_px_160"
+                android:layout_weight="3" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="年"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/sm_px_24" />
+
+            <com.lib_common.widget.datapicker.DatePickerView
+                android:id="@+id/month_pv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/sm_px_160"
+                android:layout_weight="2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="月"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/sm_px_24" />
+
+            <com.lib_common.widget.datapicker.DatePickerView
+                android:id="@+id/day_pv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/sm_px_160"
+                android:layout_weight="2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="日"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/sm_px_24" />
+
+            <com.lib_common.widget.datapicker.DatePickerView
+                android:id="@+id/hour_pv"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_weight="2" />
+
+            <TextView
+                android:id="@+id/hour_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="时"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/sm_px_24" />
+
+            <com.lib_common.widget.datapicker.DatePickerView
+                android:id="@+id/minute_pv"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_weight="2" />
+
+            <TextView
+                android:id="@+id/minute_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="分"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/sm_px_24" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

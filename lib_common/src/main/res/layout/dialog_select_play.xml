@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_corner_up"
+    android:layout_height="@dimen/sm_px_254">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/sm_px_63"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_peiwan"
+            android:layout_width="@dimen/sm_px_82"
+            android:foreground="?android:selectableItemBackground"
+            android:layout_height="@dimen/sm_px_82" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="陪玩"
+                android:textColor="@color/color_747474"
+                android:textSize="@dimen/sm_px_14"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/sm_px_63"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_jike"
+            android:layout_width="@dimen/sm_px_82"
+            android:foreground="?android:selectableItemBackground"
+            android:layout_height="@dimen/sm_px_82" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="即刻玩"
+            android:textColor="@color/color_747474"
+            android:textSize="@dimen/sm_px_14"
+            />
+    </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/sm_px_39"
+        android:scaleType="centerInside"
+        android:layout_marginBottom="@dimen/sm_px_10"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_height="@dimen/sm_px_39" />
+</FrameLayout>
+
+    </LinearLayout>
+</layout>

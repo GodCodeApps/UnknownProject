@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+<LinearLayout
+    android:id="@+id/layout_base"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_corner_up"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sm_px_20"
+        android:layout_gravity="center_horizontal"
+        android:text="选择到账账户"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sm_px_18" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_marginBottom="@dimen/sm_px_50"
+        android:layout_marginTop="@dimen/sm_px_25"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
+</android.support.constraint.ConstraintLayout>

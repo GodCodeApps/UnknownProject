@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sm_px_263"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_corner_up"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sm_px_50">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/sm_px_16"
+                android:text="取消"
+                android:textColor="@color/color_747473"
+                android:textSize="@dimen/sm_px_16" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="选择"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sm_px_16" />
+
+            <TextView
+                android:id="@+id/tv_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/sm_px_16"
+                android:text="完成"
+                android:textColor="@color/color_1D79E9"
+                android:textSize="@dimen/sm_px_16" />
+        </FrameLayout>
+
+        <com.lib_common.widget.wheel.CustomWheelView
+            android:id="@+id/wheel"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</RelativeLayout>

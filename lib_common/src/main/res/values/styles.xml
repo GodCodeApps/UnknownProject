@@ -1,0 +1,80 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus" tools:ignore="NewApi">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:actionMenuTextAppearance">@style/MyMenuTextStyle</item>
+    </style>
+
+    <style name="MyMenuTextStyle">
+        <item name="android:textColor">@color/color_222222</item>
+        <item name="android:textSize">@dimen/sm_px_16</item>
+    </style>
+
+    <style name="ToolbarTextStyle">
+        <item name="android:textSize">@dimen/sm_px_24</item>
+    </style>
+    <style name="DetailToolbarTextStyle">
+        <item name="android:textSize">@dimen/sm_px_24</item>
+        <item name="android:textColor">@color/color_ECB212</item>
+    </style>
+    <style name="ToolbarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?android:actionBarSize</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+    <!-- 自定义toolbar navigationbutton属性 -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <!-- 自定义toolbar navigationbutton属性 -->
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_height">57dp</item>
+    </style>
+    <!--自定义全屏无主题模式-->
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="TSB.ABL" parent="TSB">
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
+    <style name="TSB.CTL" parent="TSB">
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
+    <style name="TSB.IV" parent="TSB">
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
+    <style name="TSB.TB" parent="TSB">
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="TSB">
+
+    </style>
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <!-- TabLayout mTabTextSize -->
+        <item name="android:textSize">@dimen/sm_px_18</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sm_px_130"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/back_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:layout_gravity="bottom"
+                    app:layout_collapseMode="pin"
+                    app:tabBackground="@android:color/transparent"
+                    app:tabGravity="center"
+                    app:tabIndicatorColor="@color/color_ECB212"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMode="fixed"
+                    app:tabPaddingBottom="-1dp"
+                    app:tabPaddingEnd="@dimen/sm_px_10"
+                    app:tabPaddingStart="@dimen/sm_px_10"
+                    app:tabPaddingTop="-1dp"
+                    app:tabSelectedTextColor="@color/color_ECB212"
+                    app:tabTextAppearance="@style/TabTextAppearance"
+                    app:tabTextColor="@color/color_747473" />
+            </LinearLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+</layout>

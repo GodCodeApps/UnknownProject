@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/sm_px_40"
+    android:layout_marginRight="@dimen/sm_px_10"
+    android:layout_marginBottom="@dimen/sm_px_10"
+    android:gravity="center"
+    android:paddingRight="@dimen/sm_px_26"
+    android:paddingLeft="@dimen/sm_px_26"
+    android:textSize="@dimen/sm_px_14"
+    android:text="Helloworld">
+
+</TextView>

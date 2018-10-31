@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="vm"
+            type="com.lib_common.base.BaseViewModel"></variable>
+    </data>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.lib_common.widget.WindowInsetsFrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/navigationView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.lib_common.widget.BottomNavigationViewEx
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sm_px_65"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:paddingTop="@dimen/sm_px_10"
+            app:itemIconTint="@color/menu_color_selector"
+            app:itemTextColor="@color/color_BABABA"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/menu_main" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

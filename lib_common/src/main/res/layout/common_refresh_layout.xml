@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.lib_common.base.recycler.PagingViewModel" />
+    </data>
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:enabled="@{model.refreshable}"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:colorSchemeColors="@{@intArray/colorScheme}"
+        app:onRefreshListener="@{model}"
+        app:refreshing="@{model.loading}">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:adapter="@{model.adapter}"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:onScrollListener="@{model.onScrollListener}" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</layout>

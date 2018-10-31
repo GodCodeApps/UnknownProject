@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.module_community.vm.CommunityViewModel"></variable>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            contentPadding="@dimen/sm_px_0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sm_px_104"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:padding="@dimen/sm_px_0">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/sm_px_0"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:statusBarScrim="@android:color/transparent">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    app:contentInsetEnd="0dp"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin"></android.support.v7.widget.Toolbar>
+
+                <LinearLayout
+                    android:id="@+id/ll_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="@dimen/sm_px_78"
+                        android:layout_height="?actionBarSize"
+                        android:gravity="center"
+                        android:text="社区"
+                        android:textColor="@color/color_222222"
+                        android:textSize="@dimen/sm_px_24" />
+                </LinearLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <include
+            app:model="@{vm.getModel}"
+            layout="@layout/common_refresh_layout"></include>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

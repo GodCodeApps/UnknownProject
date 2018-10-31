@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sm_px_70"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/sm_px_10"
+        android:paddingTop="@dimen/sm_px_100">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/sm_px_10"
+            android:layout_marginLeft="@dimen/sm_px_15"
+            android:layout_marginRight="@dimen/sm_px_15"
+            android:gravity="center"
+            android:textColor="@color/color_ECB212"
+            android:textSize="@dimen/sm_px_18"
+            tools:text="确定要清除所有缓存吗？" />
+
+        <EditText
+            android:id="@+id/edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sm_px_10"
+            android:layout_marginLeft="@dimen/sm_px_15"
+            android:layout_marginRight="@dimen/sm_px_15"
+            android:hint="请输入..."
+            android:maxLength="20"
+            android:minHeight="@dimen/sm_px_50"
+            android:padding="@dimen/sm_px_15"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_sub_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sm_px_10"
+            android:gravity="center"
+            android:textColor="@color/color_747474"
+            android:textSize="@dimen/sm_px_16"
+            android:visibility="gone"
+            tools:text="每日最多取消3单" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sm_px_55"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/sm_px_15"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/sm_px_26"
+            android:paddingRight="@dimen/sm_px_26">
+
+            <Button
+                android:id="@+id/tv_sure"
+                android:layout_width="@dimen/sm_px_102"
+                android:layout_height="@dimen/sm_px_40"
+                android:layout_marginRight="@dimen/sm_px_15"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sm_px_16" />
+
+            <Button
+                android:id="@+id/tv_cancel"
+                android:layout_width="@dimen/sm_px_102"
+                android:layout_height="@dimen/sm_px_40"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sm_px_16" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/sm_px_140"
+        android:layout_height="@dimen/sm_px_140"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/sm_px_10"
+        android:visibility="visible" />
+</RelativeLayout>

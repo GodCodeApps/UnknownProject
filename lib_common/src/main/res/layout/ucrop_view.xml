@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Padding for both views must be equal (may be absent too) -->
+
+    <com.lib_common.widget.crop.GestureCropImageView
+        android:id="@+id/image_view_crop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.lib_common.widget.crop.OverlayView
+        android:id="@+id/view_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ucrop_show_frame="false" />
+
+</merge>

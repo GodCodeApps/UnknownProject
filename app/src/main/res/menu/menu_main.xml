@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <item
+        android:id="@+id/item_msg"
+        android:icon="@mipmap/ic_home_menu_message"
+        android:title="消息" />
+    <item
+        android:id="@+id/item_community"
+        android:icon="@mipmap/ic_home_menu_community"
+        android:title="社区" />
+</menu>

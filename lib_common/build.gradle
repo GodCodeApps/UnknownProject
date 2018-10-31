@@ -1,0 +1,92 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation rootProject.ext.support.junit
+    api rootProject.ext.support["constraint-layout"]
+    //support
+    api rootProject.ext.support["support-v4"]
+    api rootProject.ext.support["constraint-layout"]
+    api rootProject.ext.support["design"]
+    api rootProject.ext.support["cardview"]
+    api rootProject.ext.support["kotlin"]
+    //rxjava
+    api rootProject.ext.dependencies.rxjava
+    api rootProject.ext.dependencies.rxandroid
+    //rx管理View的生命周期
+    api rootProject.ext.dependencies.rxlifecycle
+    api rootProject.ext.dependencies["rxlifecycle-components"]
+    //rxbinding
+    api rootProject.ext.dependencies.rxbinding
+    //rx权限请求
+    api rootProject.ext.dependencies.rxpermissions
+    //network
+    api rootProject.ext.dependencies.okhttp
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies["converter-gson"]
+    api rootProject.ext.dependencies["adapter-rxjava"]
+    //json解析
+    api rootProject.ext.dependencies.gson
+    //material-dialogs
+    api rootProject.ext.dependencies["material-dialogs-core"]
+    api rootProject.ext.dependencies["material-dialogs-commons"]
+    //recyclerview的databinding套装
+    api rootProject.ext.dependencies.bindingcollectionadapter
+    api rootProject.ext.dependencies["bindingcollectionadapter-recyclerview"]
+    //Google LiveData和ViewModel组件
+    api rootProject.ext.dependencies["lifecycle-extensions"]
+
+    //路由库（页面跳转）
+    api rootProject.ext.dependencies.arouter
+    annotationProcessor rootProject.ext.dependencies.arouter_compiler
+    api project(':lib_base')
+//    api project(':indicatorseekbar')
+    api project(':matisse')
+    api rootProject.ext.dependencies.wechat
+
+    api rootProject.ext.dependencies["bottom-navigation-badge"]
+    //省市三级
+    api rootProject.ext.dependencies["citypickerview"]
+    //wheel
+    api rootProject.ext.dependencies["PickerView"]
+
+    api rootProject.ext.dependencies["flowlayout"]
+    api rootProject.ext.dependencies["switch-button"]
+    api rootProject.ext.dependencies["filedownloader"]
+//    implementation rootProject.ext.dependencies.umeng
+    implementation rootProject.ext.dependencies.multidex
+}
