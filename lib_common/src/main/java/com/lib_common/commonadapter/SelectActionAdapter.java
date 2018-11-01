@@ -33,6 +33,7 @@ public class SelectActionAdapter extends RecyclerView.Adapter<SelectActionAdapte
 
 
 
+
     public CardBean getSelected(){
         return list.get(mPosition);
     }

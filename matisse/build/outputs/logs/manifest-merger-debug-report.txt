@@ -1,67 +1,67 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:16:1-39:12
-INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:16:1-39:12
-INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:16:1-39:12
+ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:16:1-39:12
+INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:16:1-39:12
+INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:16:1-39:12
 	package
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:17:5-32
-		INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
-		INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:17:5-32
+		INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
+		INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:16:11-69
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:16:11-69
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:19:5-81
+ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:19:5-81
 	android:name
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:19:22-78
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:19:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:20:5-80
+ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:20:5-80
 	android:name
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:20:22-77
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:20:22-77
 application
-ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:22:5-38:19
+ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:22:5-38:19
 activity#com.zhihu.matisse.ui.MatisseActivity
-ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:23:9-73
+ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:23:9-73
 	android:name
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:23:19-70
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:23:19-70
 activity#com.zhihu.matisse.internal.ui.AlbumPreviewActivity
-ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:24:9-26:52
+ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:24:9-26:52
 	android:screenOrientation
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:26:13-49
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:26:13-49
 	android:name
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:25:13-78
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:25:13-78
 activity#com.zhihu.matisse.internal.ui.SelectedPreviewActivity
-ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:27:9-29:52
+ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:27:9-29:52
 	android:screenOrientation
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:29:13-49
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:29:13-49
 	android:name
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:28:13-81
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:28:13-81
 activity#com.zhihu.matisse.internal.ui.PreviewActivity
-ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:30:9-33:58
+ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:30:9-33:58
 	android:screenOrientation
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:32:13-49
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:32:13-49
 	android:theme
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:33:13-55
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:33:13-55
 	android:name
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:31:13-56
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:31:13-56
 activity#com.zhihu.matisse.internal.ui.PlayerActivity
-ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:34:9-37:52
+ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:34:9-37:52
 	android:screenOrientation
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:37:13-49
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:37:13-49
 	android:configChanges
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:36:13-74
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:36:13-74
 	android:name
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml:35:13-55
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml:35:13-55
 uses-sdk
-INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
-INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
-INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
-INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
+INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
+INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
+INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
+INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
-		INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
+		INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
+		INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
-		ADDED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
-		INJECTED from E:\ApymWork\adad\UnknownProject\matisse\src\main\AndroidManifest.xml
+		INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
+		ADDED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
+		INJECTED from E:\new\project\UnknownProject\matisse\src\main\AndroidManifest.xml
