@@ -59,6 +59,7 @@ public class NewHomeInfo {
         return has_more;
     }
 
+
     public void setHas_more(boolean has_more) {
         this.has_more = has_more;
     }
