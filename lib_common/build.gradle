@@ -1,4 +1,9 @@
 apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -7,11 +12,7 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [moduleName: project.getName()]
-            }
-        }
+
     }
     dataBinding {
         enabled true
@@ -33,7 +34,9 @@ android {
         }
     }
 }
-
+kapt {
+    generateStubs = false
+}
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation rootProject.ext.support.junit
@@ -89,4 +92,10 @@ dependencies {
     api rootProject.ext.dependencies["filedownloader"]
 //    implementation rootProject.ext.dependencies.umeng
     implementation rootProject.ext.dependencies.multidex
+
+    api rootProject.ext.dependencies["logging-interceptor"]
+    implementation rootProject.ext.dependencies["dagger"]
+    implementation rootProject.ext.dependencies["dagger-android-support"]
+    kapt rootProject.ext.dependencies["dagger-compiler"]
+    kapt rootProject.ext.dependencies["dagger-android-processor"]
 }

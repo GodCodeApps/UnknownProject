@@ -69,7 +69,7 @@
     <style name="TSB">
 
     </style>
-    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+    <style name="TabTextAppearance" >
         <!-- TabLayout mTabTextSize -->
         <item name="android:textSize">@dimen/sm_px_18</item>
         <item name="textAllCaps">true</item>

@@ -11,26 +11,38 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.lib_common.inject.component.ApplicationComponent;
+import com.lib_common.service.base.DataLayer;
 import com.lib_common.utils.MaterialDialogUtils;
 import com.lib_common.utils.ToastUtils;
+
+import javax.inject.Inject;
+
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
 
 
 /**
  * Created by goldze on 2017/6/15.
  */
-public class BaseViewModel extends BaseObservable implements IBaseViewModel {
+public class BaseViewModel extends BaseObservable implements IBaseViewModel ,Disposable {
     public Context context;
     protected Fragment fragment;
     public final ObservableBoolean loading = new ObservableBoolean();
     public final ObservableBoolean empty = new ObservableBoolean();
     public final ObservableBoolean error = new ObservableBoolean();
     public final ObservableField<String> msg = new ObservableField<>();
-
+    @Inject
+    DataLayer mDataLayer;
+    @Inject
+    protected CompositeDisposable mCompositeDisposable;
     public BaseViewModel() {
+        ApplicationComponent.Instance.get().inject(this);
     }
 
     public BaseViewModel(Context context) {
         this.context = context;
+        ApplicationComponent.Instance.get().inject(this);
         initDialog();
     }
 
@@ -50,8 +62,19 @@ public class BaseViewModel extends BaseObservable implements IBaseViewModel {
 
     public void afterCreate(boolean autoRequest) {
     }
+    protected DataLayer getDataLayer() {
+        return mDataLayer;
+    }
 
+    @Override
+    public boolean isDisposed() {
+        return mCompositeDisposable.isDisposed();
+    }
 
+    @Override
+    public void dispose() {
+        mCompositeDisposable.dispose();
+    }
     private MaterialDialog dialog;
 
     public void showDialog() {

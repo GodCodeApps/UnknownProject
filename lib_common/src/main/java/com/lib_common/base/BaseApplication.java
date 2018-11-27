@@ -3,22 +3,18 @@ package com.lib_common.base;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
-import android.content.IntentFilter;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.multidex.MultiDex;
 import android.text.TextUtils;
 
 import com.diandian7.imageloader.manager.ImageLoaderManager;
-import com.lib_common.receiver.NetworkChange;
+import com.lib_common.inject.component.ApplicationComponent;
+import com.lib_common.inject.component.DaggerApplicationComponent;
+import com.lib_common.inject.module.ApplicationModule;
 import com.lib_common.utils.KLog;
-import com.lib_common.utils.PreferencesUtils;
 import com.lib_common.utils.Utils;
 import com.lib_common.utils.constant.MemoryConstants;
-import com.lib_common.utils.constant.OtherLoginConstants;
-import com.lib_common.utils.constant.SharePreferencesConstant;
 import com.liulishuo.filedownloader.FileDownloader;
-
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -33,6 +29,11 @@ public abstract class BaseApplication extends Application implements Application
     @Override
     public void onCreate() {
         super.onCreate();
+        ApplicationComponent.Instance.init(
+                DaggerApplicationComponent
+                        .builder()
+                        .applicationModule(new ApplicationModule(this))
+                        .build());
         sInstance = this;
         //开启打印日志
         KLog.init(true);
@@ -61,9 +62,7 @@ public abstract class BaseApplication extends Application implements Application
 //        PlatformConfig.setWeixin(OtherLoginConstants.WECHAT_APP_ID, OtherLoginConstants.WECHAT_APP_SECRET);
 //        PlatformConfig.setQQZone(OtherLoginConstants.QQ_APP_ID, OtherLoginConstants.QQ_APP_SECRET);
 //        PlatformConfig.setSinaWeibo(OtherLoginConstants.WEIBO_APP_KEY, OtherLoginConstants.WEIBO_APP_SECRET, "http://sns.whalecloud.com");
-        //网络监听变化
-        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
-        registerReceiver(NetworkChange.getInstance(), filter);
+
     }
 
     /**

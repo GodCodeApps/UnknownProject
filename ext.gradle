@@ -13,7 +13,7 @@ ext {
     versions = [
             "support-version": "27.0.2",
             "junit-version"  : "4.12",
-            "kotlin_version" :'1.2.30',
+            "kotlin_version" : '1.2.30',
     ]
     //support配置
     support = [
@@ -28,7 +28,7 @@ ext {
             'animated-vector-drawable': "com.android.support:animated-vector-drawable:${versions["support-version"]}",
             'junit'                   : "junit:junit:${versions["junit-version"]}",
             'cardview'                : "com.android.support:cardview-v7:${versions["support-version"]}",
-            "kotlin"                   :"org.jetbrains.kotlin:kotlin-stdlib-jre7:${versions["kotlin_version"]}",
+            "kotlin"                  : "org.jetbrains.kotlin:kotlin-stdlib-jre7:${versions["kotlin_version"]}",
     ]
     //依赖第三方配置
     dependencies = [
@@ -44,6 +44,7 @@ ext {
             "rxpermissions"                        : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar",
             //network
             "okhttp"                               : "com.squareup.okhttp3:okhttp:3.10.0",
+            "logging-interceptor"                  : "com.squareup.okhttp3:logging-interceptor:3.10.0",
             "retrofit"                             : "com.squareup.retrofit2:retrofit:2.4.0",
             "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.4.0",
             "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
@@ -76,7 +77,11 @@ ext {
             "flowlayout"                           : "com.hyman:flowlayout-lib:1.1.2",//标签布局
 //            "umeng"                                : "com.umeng.sdk:common:1.5.3",
             "filedownloader"                       : "com.liulishuo.filedownloader:library:1.7.5",
-            "multidex"                             : "com.android.support:multidex:1.0.2"
+            "multidex"                             : "com.android.support:multidex:1.0.2",
+            "dagger"                               : "com.google.dagger:dagger:2.12",
+            "dagger-android-support"               : "com.google.dagger:dagger-android-support:2.12",
+            "dagger-compiler"                      : "com.google.dagger:dagger-compiler:2.12",
+            "dagger-android-processor"             : "com.google.dagger:dagger-android-processor:2.12",
     ]
 }
 
