@@ -65,16 +65,16 @@ class MainActivity : BaseActivity<ActivityMainBinding, BaseViewModel>() {
         mFragmentTransaction.show(messageFragment)
         mFragmentTransaction.commitAllowingStateLoss()
 
-        navigationView.setCurrentItem(0)
+        navigationView.currentItem = 0
 
         QMUIStatusBarHelper.setStatusBarLightMode(this@MainActivity)
 
-        navigationView.setOnNavigationItemSelectedListener({ item ->
+        navigationView.setOnNavigationItemSelectedListener { item ->
             //            var colorStateList: ColorStateList? = null
 //            if (item.getItemId() === R.id.item_msg && (ServiceFactory.getInstance().getAccountService().getLoginUser() == null || !ServiceFactory.getInstance().getAccountService().isLogin())) {
 //                return@binding.navigationView.setOnNavigationItemSelectedListener false
 //            }
-            when (item.getItemId()) {
+            when (item.itemId) {
                 R.id.item_community -> {
                     changeFragment(communityFragment)
                     QMUIStatusBarHelper.setStatusBarLightMode(this@MainActivity)
@@ -85,7 +85,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, BaseViewModel>() {
                 }
             }
             true
-        })
+        }
 
 //        /**
 //         * Menu菜单重复选中处理

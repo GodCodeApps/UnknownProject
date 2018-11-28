@@ -153,7 +153,7 @@ public abstract class PagingViewModel<T, A extends RecyclerHeaderFooterAdapter>
     protected void doOnComplete(boolean isMore) {
         refreshComplete();
         mFooterViewModel.notifyStateChanged(isMore ? FooterViewModel.STATE_IDLE : (empty.get() == true ? FooterViewModel.STATE_GONE : FooterViewModel.STATE_PERIOD));
-//        pagingLoading = false;
+        pagingLoading = false;
     }
 
 
