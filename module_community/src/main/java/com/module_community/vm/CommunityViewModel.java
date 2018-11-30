@@ -1,32 +1,28 @@
 package com.module_community.vm;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.MainThread;
+import android.content.Intent;
 
-import com.lib_common.base.BaseViewModel;
 import com.lib_common.base.recycler.PagingViewModel;
 import com.lib_common.commonadapter.CommonAdapter;
-import com.lib_common.entity.ContentGson;
-import com.lib_common.entity.NewHomeInfo;
-import com.lib_common.utils.JsonUtil;
+import com.lib_common.entity.PictureInfo;
 import com.module_community.R;
+import com.zhihu.matisse.internal.ui.PreviewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import io.reactivex.Scheduler;
+import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Action;
-import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 /**
  * Peng YanMing on 2018\10\31 0031
  */
-public class CommunityViewModel extends PagingViewModel<ContentGson, CommonAdapter> {
+public class CommunityViewModel extends PagingViewModel<PictureInfo, CommonAdapter> {
     public CommunityViewModel(Context context) {
         super(context);
     }
@@ -34,12 +30,23 @@ public class CommunityViewModel extends PagingViewModel<ContentGson, CommonAdapt
     @Override
     protected void initAdapter() {
         adapter = new CommonAdapter(context, mList, R.layout.item_community);
+        adapter.setOnItemClickListener((view, position, o) -> {
+            List<PictureInfo> list = adapter.getList();
+            Object[] objects = list.toArray();
+            Observable.fromArray(objects).map(o1 -> ((PictureInfo) o1).getUrl()).toList().subscribe(strings -> {
+                Intent intent = new Intent((Activity) context, PreviewActivity.class);
+                intent.putExtra(PreviewActivity.PREVIEW_POSITION, position);
+                intent.putStringArrayListExtra(PreviewActivity.PREVIEW_IMAGE_ARRAY, (ArrayList<String>) strings);
+                context.startActivity(intent);
+            });
+
+        });
     }
 
     @SuppressLint("CheckResult")
     @Override
     protected void getData(boolean isMore) {
-        getDataLayer().getNewService().getNewHomeList(pagingOffset)
+        getDataLayer().getNewService().getPictureList(pagingOffset)
                 .delay(500, TimeUnit.MILLISECONDS)
                 .subscribeOn(Schedulers.io())
                 .doOnSubscribe(disposable -> {
@@ -55,20 +62,11 @@ public class CommunityViewModel extends PagingViewModel<ContentGson, CommonAdapt
                     doOnError(isMore, throwable);
                 })
                 .doOnNext(image -> {
-                    pagingHaveMore = image.isHas_more();
+                    pagingHaveMore = (image.getResults().size() >= 20);
                 })
                 .subscribe(newHomeInfo -> {
-                    List<NewHomeInfo.DataBean> data = newHomeInfo.getData();
-                    List<ContentGson> results = new ArrayList<>();
-                    if (data != null && data.size() > 0) {
-                        for (int i = 0; i < data.size(); i++) {
-                            NewHomeInfo.DataBean dataBean = data.get(i);
-                            String content = dataBean.getContent();
-                            ContentGson contentGson = JsonUtil.toObj(content, ContentGson.class);
-                            results.add(contentGson);
-                        }
-                    }
+                    List<PictureInfo> results = newHomeInfo.getResults();
                     accept(isMore, results);
-                },Throwable::printStackTrace);
+                }, Throwable::printStackTrace);
     }
 }

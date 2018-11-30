@@ -1,8 +1,9 @@
 package com.lib_common.net;
 
 
-
+import com.lib_common.entity.BaseResponse;
 import com.lib_common.entity.NewHomeInfo;
+import com.lib_common.entity.PictureInfo;
 import com.lib_common.entity.VideoLiveList;
 import com.lib_common.entity.VideoLiveTable;
 
@@ -11,6 +12,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
@@ -55,6 +57,7 @@ public interface ClientAPI {
     // &update_version_code=66404
     // &_rticket=1533708507711
     // &rom_version=Funtouch+OS_3.2_PD1709_A_1.14.3
+
     /**
      * 获取新闻列表
      */
@@ -84,4 +87,7 @@ public interface ClientAPI {
                                            @Field("rom_version") String rom_version,
                                            @Field("page") int page);
 
+
+    @GET("data/{category}/" + 20 + "/{page}")
+    Observable<BaseResponse<PictureInfo>> getPicture(@Path("category") String categoryId, @Path("page") int page);
 }

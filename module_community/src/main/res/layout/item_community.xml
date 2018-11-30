@@ -5,20 +5,22 @@
 
         <variable
             name="item"
-            type="com.lib_common.entity.ContentGson"></variable>
+            type="com.lib_common.entity.PictureInfo"></variable>
     </data>
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/sm_px_120"
-        android:layout_marginTop="@dimen/sm_px_2"
-        android:layout_marginBottom="@dimen/sm_px_12">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sm_px_2">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            app:url="@{item.middle_image.url}"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            app:url="@{item.url}"
          />
     </android.support.constraint.ConstraintLayout>
 </layout>

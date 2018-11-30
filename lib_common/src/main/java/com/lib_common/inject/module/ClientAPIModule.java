@@ -37,8 +37,8 @@ public class ClientAPIModule {
 
 //private static final String BASE_URL = "http://display.miguvideo.com/display/";
 //    private static final String BASE_URL = "http://route.showapi.com/109-35/";
-    private static final String BASE_URL = "http://i.snssdk.com/";
-
+//    private static final String BASE_URL = "http://i.snssdk.com/";视频
+    private static final String BASE_URL = "http://gank.io/api/";
     /**
      * 创建一个ClientAPI的实现类单例对象
      *

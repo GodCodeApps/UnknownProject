@@ -19,10 +19,6 @@ import com.zhihu.matisse.internal.utils.qmuihelper.QMUIDisplayHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * author hechao
- * date 2018/9/10 0010
- */
 public class PreviewActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
     public static final String PREVIEW_IMAGE_ARRAY = "preview_image_array";

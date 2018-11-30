@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.support.v4.app.Fragment;
 
 
+import com.lib_common.entity.BaseResponse;
 import com.lib_common.entity.NewHomeInfo;
+import com.lib_common.entity.PictureInfo;
 import com.lib_common.entity.VideoLiveList;
 import com.lib_common.entity.VideoLiveTable;
 
@@ -43,6 +45,6 @@ public class DataLayer {
     }
     public interface NewService {
         Observable<NewHomeInfo> getNewHomeList(int page);
-
+        Observable<BaseResponse<PictureInfo>> getPictureList(int page);
     }
 }
