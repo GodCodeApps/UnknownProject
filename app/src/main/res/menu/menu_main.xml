@@ -9,5 +9,5 @@
     <item
         android:id="@+id/item_community"
         android:icon="@mipmap/ic_home_menu_community"
-        android:title="社区" />
+        android:title="福利" />
 </menu>

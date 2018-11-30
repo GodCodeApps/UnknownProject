@@ -45,6 +45,6 @@ public class DataLayer {
     }
     public interface NewService {
         Observable<NewHomeInfo> getNewHomeList(int page);
-        Observable<BaseResponse<PictureInfo>> getPictureList(int page);
+        Observable<BaseResponse<PictureInfo>> getPictureList(int page,int pagingLimit );
     }
 }

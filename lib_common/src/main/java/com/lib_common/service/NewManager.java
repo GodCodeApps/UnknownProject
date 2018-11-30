@@ -22,8 +22,8 @@ public class NewManager extends BaseManager implements DataLayer.NewService {
     }
 
     @Override
-    public Observable<BaseResponse<PictureInfo>> getPictureList(int page) {
-        return getApi().getPicture("福利",page);
+    public Observable<BaseResponse<PictureInfo>> getPictureList(int page,int pagingLimit) {
+        return getApi().getPicture("福利",page,pagingLimit);
     }
 
 //    @Override

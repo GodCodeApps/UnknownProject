@@ -88,6 +88,6 @@ public interface ClientAPI {
                                            @Field("page") int page);
 
 
-    @GET("data/{category}/" + 20 + "/{page}")
-    Observable<BaseResponse<PictureInfo>> getPicture(@Path("category") String categoryId, @Path("page") int page);
+    @GET("data/{category}/"+"/{pagingLimit}"+"/{page}")
+    Observable<BaseResponse<PictureInfo>> getPicture(@Path("category") String categoryId, @Path("page") int page,@Path("pagingLimit") int pagingLimit);
 }

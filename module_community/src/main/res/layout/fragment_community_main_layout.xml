@@ -49,7 +49,7 @@
                         android:layout_width="@dimen/sm_px_78"
                         android:layout_height="?actionBarSize"
                         android:gravity="center"
-                        android:text="社区"
+                        android:text="福利"
                         android:textColor="@color/color_222222"
                         android:textSize="@dimen/sm_px_24" />
                 </LinearLayout>

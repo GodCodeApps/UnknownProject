@@ -46,7 +46,7 @@ public class CommunityViewModel extends PagingViewModel<PictureInfo, CommonAdapt
     @SuppressLint("CheckResult")
     @Override
     protected void getData(boolean isMore) {
-        getDataLayer().getNewService().getPictureList(pagingOffset)
+        getDataLayer().getNewService().getPictureList(pagingOffset,pagingLimit)
                 .delay(500, TimeUnit.MILLISECONDS)
                 .subscribeOn(Schedulers.io())
                 .doOnSubscribe(disposable -> {
