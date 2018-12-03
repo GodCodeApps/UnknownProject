@@ -24,12 +24,13 @@ public class RxBaseFragment extends RxFragment {
     @Inject
     protected CompositeDisposable mCompositeDisposable;
 
-    @Nullable
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         ApplicationComponent.Instance.get().inject(this);
-        return super.onCreateView(inflater, container, savedInstanceState);
+        super.onViewCreated(view, savedInstanceState);
     }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();

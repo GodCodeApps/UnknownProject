@@ -99,7 +99,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, BaseViewModel>() {
 //            }
 //        })
 
-        addBadgeAt(0, 1)
+//        addBadgeAt(0, 1)
     }
 
     private fun changeFragment(currentFragment: Fragment) {

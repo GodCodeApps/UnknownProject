@@ -12,10 +12,6 @@ import com.lib_common.R;
 import com.lib_common.utils.constant.VideoConstants;
 import com.shuyu.gsyvideoplayer.video.NormalGSYVideoPlayer;
 
-/**
- * author hechao
- * date 2018/9/11 0011
- */
 public class SimpleVideoPlayer extends NormalGSYVideoPlayer {
 
     public SimpleVideoPlayer(Context context) {
@@ -29,7 +25,7 @@ public class SimpleVideoPlayer extends NormalGSYVideoPlayer {
     }
 
     public void setVideoUrl(String url) {
-        setThumbImageView(getThumbView(url + VideoConstants.OSS_THUMB_SUFFIX));
+//        setThumbImageView(getThumbView(url));
         setUp(url, true, null);
     }
 

@@ -5,7 +5,7 @@
     <item
         android:id="@+id/item_msg"
         android:icon="@mipmap/ic_home_menu_message"
-        android:title="消息" />
+        android:title="视频" />
     <item
         android:id="@+id/item_community"
         android:icon="@mipmap/ic_home_menu_community"

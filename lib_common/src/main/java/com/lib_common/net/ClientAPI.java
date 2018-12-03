@@ -4,6 +4,7 @@ package com.lib_common.net;
 import com.lib_common.entity.BaseResponse;
 import com.lib_common.entity.NewHomeInfo;
 import com.lib_common.entity.PictureInfo;
+import com.lib_common.entity.VideoInfo;
 import com.lib_common.entity.VideoLiveList;
 import com.lib_common.entity.VideoLiveTable;
 
@@ -11,6 +12,7 @@ import io.reactivex.Observable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -87,7 +89,9 @@ public interface ClientAPI {
                                            @Field("rom_version") String rom_version,
                                            @Field("page") int page);
 
+    @GET("http://baobab.kaiyanapp.com/api/v4/tabs/selected?")
+    Observable<VideoInfo> getVideoList(@Query("date") long date, @Query("num") int num, @Query("page") int page);
 
-    @GET("data/{category}/"+"/{pagingLimit}"+"/{page}")
-    Observable<BaseResponse<PictureInfo>> getPicture(@Path("category") String categoryId, @Path("page") int page,@Path("pagingLimit") int pagingLimit);
+    @GET("http://gank.io/api/" + "data/{category}/" + "/{pagingLimit}" + "/{page}")
+    Observable<BaseResponse<PictureInfo>> getPicture(@Path("category") String categoryId, @Path("page") int page, @Path("pagingLimit") int pagingLimit);
 }

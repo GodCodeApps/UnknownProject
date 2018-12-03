@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.lib_common.entity.VideoInfo.ItemListBean"></variable>
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.lib_common.widget.SimpleVideoPlayer
+            android:id="@+id/simple_video_player"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sm_px_220"></com.lib_common.widget.SimpleVideoPlayer>
+    </android.support.constraint.ConstraintLayout>
+</layout>

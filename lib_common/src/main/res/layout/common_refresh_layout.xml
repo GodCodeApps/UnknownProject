@@ -24,8 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:adapter="@{model.adapter}"
-            app:layoutManager="android.support.v7.widget.StaggeredGridLayoutManager"
-            app:onScrollListener="@{model.onScrollListener}"
-            app:spanCount="2" />
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:onScrollListener="@{model.onScrollListener}"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 </layout>

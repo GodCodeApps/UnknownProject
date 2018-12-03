@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.lib_common.base.BaseViewModel;
+import com.lib_common.commonadapter.VideoListAdapter;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
 
 import java.util.ArrayList;
@@ -216,11 +217,11 @@ public abstract class PagingViewModel<T, A extends RecyclerHeaderFooterAdapter>
             if (position >= 0) {
 
                 //对应的播放列表TAG
-//                if (GSYVideoManager.instance().getPlayTag().equals(DynamicAdapter.class.getCanonicalName())
-//                        && (position < mFirstVisibleItem || position > mLastVisibleItem)) {
-//                    GSYVideoManager.releaseAllVideos();
-//                    adapter.notifyDataSetChanged();
-//                }
+                if (GSYVideoManager.instance().getPlayTag().equals(VideoListAdapter.class.getCanonicalName())
+                        && (position < mFirstVisibleItem || position > mLastVisibleItem)) {
+                    GSYVideoManager.releaseAllVideos();
+                    adapter.notifyDataSetChanged();
+                }
             }
         }
     };

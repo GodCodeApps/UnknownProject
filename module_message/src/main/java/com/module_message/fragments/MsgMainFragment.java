@@ -10,19 +10,19 @@ import android.view.ViewGroup;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.lib_common.base.BaseFragment;
-import com.lib_common.base.BaseViewModel;
 import com.lib_common.utils.constant.MemoryConstants;
 import com.lib_common.utils.constant.RouteConstants;
 import com.lib_common.utils.qmuihelper.QMUIDisplayHelper;
 import com.module_message.BR;
 import com.module_message.R;
 import com.module_message.databinding.FragmentMsgMainLayoutBinding;
+import com.module_message.vm.VideoViewModel;
 
 /**
  * Peng YanMing on 2018\10\30 0030
  */
 @Route(path = RouteConstants.Message.MESSAGE_MAIN)
-public class MsgMainFragment extends BaseFragment<FragmentMsgMainLayoutBinding,BaseViewModel>{
+public class MsgMainFragment extends BaseFragment<FragmentMsgMainLayoutBinding,VideoViewModel>{
     @Override
     public int initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return R.layout.fragment_msg_main_layout;
@@ -34,13 +34,14 @@ public class MsgMainFragment extends BaseFragment<FragmentMsgMainLayoutBinding,B
     }
 
     @Override
-    public BaseViewModel initViewModel() {
-        return new BaseViewModel(getActivity());
+    public VideoViewModel initViewModel() {
+        return new VideoViewModel(getActivity());
     }
 
     @Override
     public void initViewObservable() {
         super.initViewObservable();
+        viewModel.afterCreate();
         initTitle();
     }
 

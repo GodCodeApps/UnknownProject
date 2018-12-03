@@ -30,7 +30,7 @@ public class DataLayerModule {
 
     @Singleton
     @Provides
-    public DataLayer provideDataLayer(VideoServiceManager VideoServiceManager, NewManager doubanManager) {
-        return new DataLayer(VideoServiceManager, doubanManager);
+    public DataLayer provideDataLayer(VideoServiceManager VideoServiceManager, NewManager newManager) {
+        return new DataLayer(VideoServiceManager, newManager);
     }
 }

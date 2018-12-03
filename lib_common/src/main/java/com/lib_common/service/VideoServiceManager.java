@@ -7,6 +7,7 @@ package com.lib_common.service;
 import android.support.v4.app.Fragment;
 
 
+import com.lib_common.entity.VideoInfo;
 import com.lib_common.entity.VideoLiveList;
 import com.lib_common.entity.VideoLiveTable;
 import com.lib_common.service.base.BaseManager;
@@ -29,6 +30,11 @@ public class VideoServiceManager extends BaseManager implements DataLayer.VideoP
     @Override
     public Observable<VideoLiveList> getVideoLiveList(Fragment fragment, int id, int feeds_type, int page) {
         return getApi().getVideoliveList(id, feeds_type, page);
+    }
+
+    @Override
+    public Observable<VideoInfo> getVideoList(long data ,int num,int page) {
+        return getApi().getVideoList(data,num,page);
     }
 }
 

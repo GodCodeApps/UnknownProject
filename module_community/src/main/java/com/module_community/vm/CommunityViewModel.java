@@ -62,7 +62,7 @@ public class CommunityViewModel extends PagingViewModel<PictureInfo, CommonAdapt
                     doOnError(isMore, throwable);
                 })
                 .doOnNext(image -> {
-                    pagingHaveMore = (image.getResults().size() >= 20);
+                    pagingHaveMore = (image.getResults().size() >= pagingLimit);
                 })
                 .subscribe(newHomeInfo -> {
                     List<PictureInfo> results = newHomeInfo.getResults();

@@ -1,8 +1,5 @@
 package com.lib_common.service;
 
-import android.app.Activity;
-
-
 import com.lib_common.entity.BaseResponse;
 import com.lib_common.entity.NewHomeInfo;
 import com.lib_common.entity.PictureInfo;
