@@ -17,6 +17,8 @@ import com.module_message.BR;
 import com.module_message.R;
 import com.module_message.databinding.FragmentMsgMainLayoutBinding;
 import com.module_message.vm.VideoViewModel;
+import com.shuyu.gsyvideoplayer.GSYVideoManager;
+import com.shuyu.gsyvideoplayer.video.GSYADVideoPlayer;
 
 /**
  * Peng YanMing on 2018\10\30 0030
@@ -69,6 +71,24 @@ public class MsgMainFragment extends BaseFragment<FragmentMsgMainLayoutBinding,V
             float newTextSize = tabSelectedTextSize - ((float) (tabTopTextSize - tabSelectedTextSize) / (float) binding.appBar.getTotalScrollRange()) * verticalOffset;
             binding.title.setTextSize(TypedValue.COMPLEX_UNIT_PX, newTextSize);
         });
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        GSYVideoManager.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        GSYVideoManager.onResume();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        GSYVideoManager.releaseAllVideos();
     }
 }
 

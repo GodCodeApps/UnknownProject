@@ -6,6 +6,8 @@
         <variable
             name="model"
             type="com.lib_common.base.recycler.PagingViewModel" />
+
+        <import type="android.view.View"></import>
     </data>
 
     <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -19,12 +21,24 @@
         app:onRefreshListener="@{model}"
         app:refreshing="@{model.loading}">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerView"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:adapter="@{model.adapter}"
-            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-            app:onScrollListener="@{model.onScrollListener}"/>
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:adapter="@{model.adapter}"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:onScrollListener="@{model.onScrollListener}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@{model.msg}"
+                android:visibility="@{(model.empty||model.error)?View.VISIBLE:View.GONE}" />
+        </RelativeLayout>
     </android.support.v4.widget.SwipeRefreshLayout>
 </layout>
