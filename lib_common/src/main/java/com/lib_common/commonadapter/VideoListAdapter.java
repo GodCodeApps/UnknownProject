@@ -1,11 +1,14 @@
 package com.lib_common.commonadapter;
 
+import android.app.Activity;
 import android.content.Context;
 
 import com.lib_common.R;
 import com.lib_common.base.recycler.RecyclerHolder;
 import com.lib_common.databinding.ItemVideoListBinding;
 import com.lib_common.entity.VideoInfo;
+import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
+import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
 
 import java.util.List;
 
@@ -29,9 +32,15 @@ public class VideoListAdapter extends CommonAdapter<VideoInfo.ItemListBean, Item
         } else {
             binding.simpleVideoPlayer.setThumbImageView(binding.simpleVideoPlayer.getThumbView(itemListBean.getData().getPlayUrl()));
         }
-        binding.simpleVideoPlayer.getFullscreenButton().setOnClickListener(v -> binding.simpleVideoPlayer.startWindowFullscreen(mContext, false, false));
+        initOrientationUtils(binding.simpleVideoPlayer, binding.simpleVideoPlayer.isIfCurrentIsFullscreen());
+        binding.simpleVideoPlayer.getFullscreenButton().setOnClickListener(v -> binding.simpleVideoPlayer.startWindowFullscreen(mContext, true, true));
         binding.simpleVideoPlayer.setPlayPosition(position);
         binding.simpleVideoPlayer.setPlayTag(VideoListAdapter.class.getCanonicalName());
-
+    }
+    private void initOrientationUtils(StandardGSYVideoPlayer standardGSYVideoPlayer, boolean full) {
+        OrientationUtils  mOrientationUtils = new OrientationUtils((Activity) mContext, standardGSYVideoPlayer);
+        //orientationUtils.setRotateWithSystem(false);
+        mOrientationUtils.setEnable(false);
+        mOrientationUtils.setIsLand((full) ? 1 : 0);
     }
 }

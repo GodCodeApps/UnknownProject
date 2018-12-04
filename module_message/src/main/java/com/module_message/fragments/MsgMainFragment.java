@@ -18,7 +18,6 @@ import com.module_message.R;
 import com.module_message.databinding.FragmentMsgMainLayoutBinding;
 import com.module_message.vm.VideoViewModel;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
-import com.shuyu.gsyvideoplayer.video.GSYADVideoPlayer;
 
 /**
  * Peng YanMing on 2018\10\30 0030
